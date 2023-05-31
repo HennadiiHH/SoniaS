@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="icon" type="image/x-icon" href="./assets/images/New-Logo.ico">
+  <title>Hard-Surface</title>  
+
+<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Works</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+        </ul>
+
+
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./PJ_DS.html" title="" >001</a></li>
+            <li><a href="./PJ_drone.html" title=""class="active">002</a></li>
+            <li><a href="./PJ_Ebro.html" title="">003</a></li>
+          </ul>
+
+
+      </div> 
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="./assets/images/PJ_MM_Cover.jpg" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <h1 class="h2">002 : Hard-Surface</h1>
+          </div>
+          <p class="text-center">Blender 3D / Photoshop</p>
+          <p style="font-size: 14px; margin-top: 30px; text-align: justify;">
+            Hard surface modeling is a modeling technique used to model cars, armor, machines, and generally inanimate objects with smooth, static surfaces. This technique is widely used in science fiction and shooter video games because it is ideal for building weapons, robots, armor, machines, and structures.
+          </p> 
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="col-l-12">
+          <img src="./assets/images/Headphone.png" class="img-responsive" alt="">
+        </div>
+      </div>
+    
+   </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<script>
+  WindowSize();
+  window.onresize = WindowSize;
+
+  function WindowSize(){
+    document.getElementById('fix').style.height= (document.getElementById('fix').getBoundingClientRect().width*9/16)+"px";
+    document.getElementById('fix').innerHTML=`
+    <video onloadstart="this.volume=0.1" volume="0.2" width="100%" height="${(document.getElementById('fix').getBoundingClientRect().width*9/16)+"px"}" controls>
+              <source src="./assets/images/PJ_Drone/Drones_R1.mp4" type="video/mp4">
+    </video>
+    `;
+    document.getElementById('fix2').style.height= (document.getElementById('fix2').getBoundingClientRect().width*9/16)+"px";
+    document.getElementById('fix2').innerHTML=`
+    <video onloadstart="this.volume=0.12" volume="0.2"; width="100%" height="${(document.getElementById('fix2').getBoundingClientRect().width*9/16)+"px"}" controls>
+              <source src="./assets/images/PJ_Drone/Drones_R2.mp4" type="video/mp4">
+    </video>
+    `;
+  
+     }
+ 
+</script>
+<script type="text/javascript" src="./main.70a66962.js"></script></body>
+
+</html>

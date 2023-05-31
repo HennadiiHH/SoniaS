@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="icon" type="image/x-icon" href="./assets/images/New-Logo.ico">
+  <title>Freelance</title>  
+
+<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Works</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+        </ul>
+
+
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./PJ_DS.html" title="" class="active">001</a></li>
+            <li><a href="./PJ_drone.html" title="">002</a></li>
+            <li><a href="./PJ_Ebro.html" title="">003</a></li>
+          </ul>
+
+
+      </div> 
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="./assets/images/PJ_DS_cover.jpg" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <h1 class="h2">001 : Freelance</h1>
+          </div>
+          <p class="text-center">Blender 3D / UVlayout / Marmoset Toolbag / Substance Painter / Photoshop</p>
+
+          <p style="font-size: 14px; margin-top: 30px;">
+            In this case, I would like to present the work done during my Freelance. In this project, I was mainly involved in technical modeling. The main task was to create an AR as a model for integration into the company's advertising materials. Approximate optimization scale compared to an engineering model of <strong>1:200</strong>.
+          </p>
+        </div>
+      </div>
+
+      
+
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-xs-12" id="fix">
+            
+          </div>
+        </div>
+      
+      </div>
+
+      
+      
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+<script>
+  WindowSize();
+  window.onresize = WindowSize;
+  function WindowSize(){
+    document.getElementById('fix').style.width = document.getElementById('fix').getBoundingClientRect().width+"px";
+    document.getElementById('fix').style.height=  (document.getElementById('fix').getBoundingClientRect().width*9/16)+"px";
+    document.getElementById('fix').innerHTML=`
+    <div style="position: absolute; z-index:10; top:10px; left:calc(50% - 100px)">
+      <ul class="nav navbar-nav " style="display:flex;">
+        <li><button class="button" id="DS7"> DS7</button></li>
+          <li><button class="button" id="Bike"> Bike</button></li>
+          <li><button class="button" id="boatsave"> Boat</button></li>
+          <li><button class="button" id="Battery"> Battery</button></li>
+        </ul> 
+    </div> 
+    <model-viewer id="viewer" style=" width:100%; height:100%" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" 
+                     
+                      src="./assets/DS7.glb" 
+                      ar environment-image="./assets/small_rural_road_2k.hdr" 
+                      poster="./assets/Curve-Loading.gif" 
+                      shadow-intensity="1" 
+                      camera-controls 
+                      exposure ="1.5"
+                      
+interpolation-decay="200"
+                      touch-action="pan-y">
+    </model-viewer>
+    `;
+    document.querySelectorAll(".button").forEach(
+      e=> e.addEventListener("click",()=>{
+        document.querySelectorAll(".button").forEach(e1=>e1.style.fontWeight="normal")
+        document.querySelector('#viewer').src="./assets/"+e.id+".glb"
+        e.style.fontWeight="bold"
+      })
+    )
+    document.querySelector(".button").style.fontWeight="bold";
+     }
+
+    
+</script>
+<script type="text/javascript" src="./main.70a66962.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+
+</html>
